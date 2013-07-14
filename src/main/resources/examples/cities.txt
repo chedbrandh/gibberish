@@ -1,0 +1,42 @@
+Shanghai
+Lagos
+Delhi
+Istanbul
+Tokyo
+Mumbai
+Moscow
+São Paulo
+Beijing
+Seoul
+Jakarta
+Kinshasa
+Tianjin
+Cairo
+Mexico City
+Lima
+New York City
+London
+Bangkok
+Tehran
+Shenyang
+Ho Chi Minh City
+Hong Kong
+Baghdad
+Hanoi
+Rio de Janeiro
+Santiago
+Singapore
+Saint Petersburg
+Alexandria
+Ankara
+Johannesburg
+Los Angeles
+Cape Town
+Yokohama
+Berlin
+Kabul
+Casablanca
+Pyongyang
+Madrid
+Nairobi
+Buenos Aires

@@ -1,0 +1,66 @@
+files:
+    number:
+        path        : "src/main/resources/examples/number_plural_32.txt"
+    adjective:
+        path        : "src/main/resources/examples/animal_adjective.txt"
+    animal:
+        path        : "src/main/resources/examples/animal_plural.txt"
+    verb:
+        path        : "src/main/resources/examples/animal_intransative_verb.txt"
+    adverb:
+        path        : "src/main/resources/examples/animal_adverb_of_manner.txt"
+    nationality:
+        path        : "src/main/resources/examples/nationality.txt"
+    religion:
+        path        : "src/main/resources/examples/religious_demonyms.txt"
+    astronomical-demonym:
+        path        : "src/main/resources/examples/astronomical_demonyms.txt"
+    city-demonym:
+        path        : "src/main/resources/examples/city_demonyms.txt"
+    city:
+        path        : "src/main/resources/examples/cities.txt"
+    country:
+        path        : "src/main/resources/examples/countries.txt"
+    state:
+        path        : "src/main/resources/examples/us_states.txt"
+    random:
+        path        : "src/main/resources/examples/random_word.txt"
+
+providers:
+    numbers:
+        files   : ["number"]
+    adjectives:
+        files   : ["adjective"]
+    animals:
+        files   : ["animal"]
+    verbs:
+        files   : ["verb"]
+    adverbs:
+        files   : ["adverb"]
+    demonym:
+        files   : ["nationality", "religion", "astronomical-demonym", "city-demonym"]
+    place:
+        files   : ["city", "country", "state"]
+    random:
+        files   : ["random"]
+
+translators:
+    animal_sentence:
+        format           : ["", " ", " ", " ", " ", ""]
+        providers        : ["numbers", "adjectives", "animals", "verbs", "adverbs"]
+        number_of_bits   : 31
+    animal_sentence_long:
+        format           : ["", " ", " ", " ", " and ", " ", " ", " ", " ", " ", " in ", ""]
+        providers        : ["numbers", "adjectives", "demonym", "animals",
+                            "numbers", "adjectives", "demonym", "animals",
+                            "verbs", "adverbs", "place"]
+        number_of_bits   : 71
+        checksum         : "26599230c51f5aa9e7f5e7a438ada780648baff6"
+    animal_sentence_short:
+        format           : ["", " ", " live in ", "."]
+        providers        : ["numbers", "animals", "place"]
+        number_of_bits   : 10
+    passphrase:
+        format           : ["", " ", " ", " ", ""]
+        providers        : ["random", "random", "random", "random"]
+        bit_distribution : [2, 2, 2, 2]

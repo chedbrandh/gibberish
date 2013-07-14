@@ -1,0 +1,16 @@
+terran
+jovian
+martian
+mercurian
+neptunian
+saturnian
+uranian
+venusian
+plutonian
+lunarian
+europan
+ionian
+ganymedean
+titanian
+enceladan
+andromedan

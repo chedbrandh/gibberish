@@ -1,0 +1,28 @@
+files:
+    letters:
+        path        : "src/test/resources/word_file_letters.txt"
+    numbers:
+        path        : "src/test/resources/word_file_numbers.txt"
+
+providers:
+    letters:
+        files: ["letters"]
+    numbers:
+        files : ["numbers"]
+    all:
+        files : ["numbers", "letters"]
+
+translators:
+    foo_bar_baz:
+        format           : ["foo ", " bar ", " baz"]
+        providers        : ["letters", "numbers"]
+        bit_distribution : [2, 3]
+    checksum_translator:
+        format           : ["1", "2", "3"]
+        providers        : ["all", "all"]
+        bit_distribution : [1, 2]
+        checksum         : "3f824c6be2a32e345c83bd703dbfd8a5b6477a47"
+    optimized_translator:
+        format           : ["1", "2", "3"]
+        providers        : ["all", "all"]
+        number_of_bits   : 4
