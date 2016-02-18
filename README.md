@@ -79,7 +79,6 @@ PhraseTranslator translator =
     schemaReader.getTranslators().get("animal_sentence");
 // print a random phrase
 System.out.println(translator.fromLong(Math.abs(new Random().nextLong())));
-}
 ```
 
 For more example code, check out the `com.chedbrandh.gibberish.example`
